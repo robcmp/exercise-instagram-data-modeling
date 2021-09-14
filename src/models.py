@@ -45,7 +45,7 @@ class Media(Base):
     # Here we define columns for the table person
     # Notice that each column is also a normal Python instance attribute.
     id = Column(Integer, primary_key=True)
-    media_type= Column(Enum("a", "b", "c", create_constraint=True))
+    media_type= Column(Enum("video", "image"))
     url= Column(String(200))
     post_id = Column(Integer, ForeignKey('post.id'))
     post = relationship('Post')
